@@ -7,16 +7,16 @@ public class UserRegistration {
 		// TODO Auto-generated method stub
 
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter an email:");
-		String email=sc.nextLine();
-		if(email == null)
+		System.out.println("Enter mobile number:");
+		String mobileNumber=sc.nextLine();
+		if(mobileNumber == null)
 			System.out.println("Invalid");
-		String RegExemail = "^[A-Za-z0-9_]+[A-Za-z0-9_-]*([.]{1}[a-zA-Z-0-9]*)*[@]{1}[a-z]+[.][a-z]{2,6}([.][a-z0-9]{2})*$";
-	    Pattern pattern = Pattern.compile(RegExemail);
-		if(pattern.matcher(email).matches()) {
+		String RegExMobileNumber = "^[0-9]{1,3}[ ]{1}[1-9]{1}[0-9]{9}$";
+	    Pattern pattern = Pattern.compile(RegExMobileNumber);
+		if(pattern.matcher(mobileNumber).matches()) {
 			System.out.println("valid");
 		} else {
-			System.out.println("Invalid"); 
+			System.out.println("Invalid");
 		}
 	}
-	}
+}
