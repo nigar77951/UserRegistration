@@ -11,7 +11,7 @@ public class UserRegistration {
 		String password=sc.nextLine();
 		if(password == null)
 			System.out.println("Invalid");
-		String RegExPassword = ".{8,}$";
+		String RegExPassword = "(?=.*[A-Z]).{8,}$";
 	    Pattern pattern = Pattern.compile(RegExPassword);
 		if(pattern.matcher(password).matches()) {
 			System.out.println("valid");
